@@ -27,8 +27,6 @@ import javax.validation.constraints.Size;
  * @Entity capacitacion_alumno Entidad que almacena la informaciácion de los alumnos dentro de la capacitacion que hayan tomado */
 @Entity
 @Table(name = "capacitacion_alumno")
-@NamedQueries({
-    @NamedQuery(name = "CapacitacionAlumno.findAll", query = "SELECT c FROM CapacitacionAlumno c")})
 public class CapacitacionAlumno implements Serializable {
 
     private static final long serialVersionUID = 1L;
