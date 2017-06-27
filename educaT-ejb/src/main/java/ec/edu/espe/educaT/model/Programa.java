@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.educaT;
+package ec.edu.espe.educaT.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.CascadeType;
@@ -16,38 +17,32 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author CRIS
- */
-/**Creación entidad curso
- * @Entity curso Entidad que registra información referente a cada curso que oferta el instituto.
+ * @author AyrtonWladimir
  */
 @Entity
-@Table(name = "curso")
+@Table(name = "programa")
 
-public class Curso implements Serializable {
+public class Programa implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 8)
-    @Column(name = "COD_CURSO", nullable = false, length = 8)
-    private String codCurso;
+    @Column(name = "COD_PROGRAMA", nullable = false, length = 8)
+    private String codPrograma;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 100)
     @Column(name = "NOMBRE", nullable = false, length = 100)
     private String nombre;
-    @Size(max = 4000)
-    @Column(name = "OBJETIVO", length = 4000)
-    private String objetivo;
     @Size(max = 4000)
     @Column(name = "DESCRIPCION", length = 4000)
     private String descripcion;
@@ -55,36 +50,36 @@ public class Curso implements Serializable {
     @NotNull
     @Column(name = "DURACION", nullable = false)
     private short duracion;
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 3)
-    @Column(name = "ESTADO", nullable = false, length = 3)
-    private String estado;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "codCurso")
-    private List<Capacitacion> capacitacionList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "curso")
+    @Column(name = "FECHA_INICIO")
+    @Temporal(TemporalType.DATE)
+    private Date fechaInicio;
+    @Column(name = "FECHA_FIN")
+    @Temporal(TemporalType.DATE)
+    private Date fechaFin;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "programa")
     private List<ProgramaCurso> programaCursoList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "programa")
+    private List<ProgramaAlumno> programaAlumnoList;
 
-    public Curso() {
+    public Programa() {
     }
 
-    public Curso(String codCurso) {
-        this.codCurso = codCurso;
+    public Programa(String codPrograma) {
+        this.codPrograma = codPrograma;
     }
 
-    public Curso(String codCurso, String nombre, short duracion, String estado) {
-        this.codCurso = codCurso;
+    public Programa(String codPrograma, String nombre, short duracion) {
+        this.codPrograma = codPrograma;
         this.nombre = nombre;
         this.duracion = duracion;
-        this.estado = estado;
     }
 
-    public String getCodCurso() {
-        return codCurso;
+    public String getCodPrograma() {
+        return codPrograma;
     }
 
-    public void setCodCurso(String codCurso) {
-        this.codCurso = codCurso;
+    public void setCodPrograma(String codPrograma) {
+        this.codPrograma = codPrograma;
     }
 
     public String getNombre() {
@@ -93,14 +88,6 @@ public class Curso implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getObjetivo() {
-        return objetivo;
-    }
-
-    public void setObjetivo(String objetivo) {
-        this.objetivo = objetivo;
     }
 
     public String getDescripcion() {
@@ -119,24 +106,22 @@ public class Curso implements Serializable {
         this.duracion = duracion;
     }
 
-    public String getEstado() {
-        return estado;
+    public Date getFechaInicio() {
+        return fechaInicio;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
     }
 
-    @XmlTransient
-    public List<Capacitacion> getCapacitacionList() {
-        return capacitacionList;
+    public Date getFechaFin() {
+        return fechaFin;
     }
 
-    public void setCapacitacionList(List<Capacitacion> capacitacionList) {
-        this.capacitacionList = capacitacionList;
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
     }
 
-    @XmlTransient
     public List<ProgramaCurso> getProgramaCursoList() {
         return programaCursoList;
     }
@@ -145,21 +130,29 @@ public class Curso implements Serializable {
         this.programaCursoList = programaCursoList;
     }
 
+    public List<ProgramaAlumno> getProgramaAlumnoList() {
+        return programaAlumnoList;
+    }
+
+    public void setProgramaAlumnoList(List<ProgramaAlumno> programaAlumnoList) {
+        this.programaAlumnoList = programaAlumnoList;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (codCurso != null ? codCurso.hashCode() : 0);
+        hash += (codPrograma != null ? codPrograma.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Curso)) {
+        if (!(object instanceof Programa)) {
             return false;
         }
-        Curso other = (Curso) object;
-        if ((this.codCurso == null && other.codCurso != null) || (this.codCurso != null && !this.codCurso.equals(other.codCurso))) {
+        Programa other = (Programa) object;
+        if ((this.codPrograma == null && other.codPrograma != null) || (this.codPrograma != null && !this.codPrograma.equals(other.codPrograma))) {
             return false;
         }
         return true;
@@ -167,7 +160,7 @@ public class Curso implements Serializable {
 
     @Override
     public String toString() {
-        return "ec.edu.espe.educaT.Curso[ codCurso=" + codCurso + " ]";
+        return "ec.edu.espe.module.Programa[ codPrograma=" + codPrograma + " ]";
     }
     
 }

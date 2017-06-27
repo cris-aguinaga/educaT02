@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.educaT;
+package ec.edu.espe.educaT.model;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -23,46 +23,59 @@ import javax.validation.constraints.Size;
  * @author AyrtonWladimir
  */
 @Entity
-@Table(name = "programa_alumno")
-public class ProgramaAlumno implements Serializable {
+@Table(name = "programa_curso")
+public class ProgramaCurso implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @EmbeddedId
-    protected ProgramaAlumnoPK programaAlumnoPK;
+    protected ProgramaCursoPK programaCursoPK;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "ORDEN", nullable = false)
+    private short orden;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 3)
     @Column(name = "ESTADO", nullable = false, length = 3)
     private String estado;
-    @JoinColumn(name = "COD_ALUMNO", referencedColumnName = "COD_ALUMNO", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "COD_CURSO", referencedColumnName = "COD_CURSO", nullable = false, insertable = false, updatable = false)
     @ManyToOne(optional = false)
-    private Alumno alumno;
+    private Curso curso;
     @JoinColumn(name = "COD_PROGRAMA", referencedColumnName = "COD_PROGRAMA", nullable = false, insertable = false, updatable = false)
     @ManyToOne(optional = false)
     private Programa programa;
 
-    public ProgramaAlumno() {
+    public ProgramaCurso() {
     }
 
-    public ProgramaAlumno(ProgramaAlumnoPK programaAlumnoPK) {
-        this.programaAlumnoPK = programaAlumnoPK;
+    public ProgramaCurso(ProgramaCursoPK programaCursoPK) {
+        this.programaCursoPK = programaCursoPK;
     }
 
-    public ProgramaAlumno(ProgramaAlumnoPK programaAlumnoPK, String estado) {
-        this.programaAlumnoPK = programaAlumnoPK;
+    public ProgramaCurso(ProgramaCursoPK programaCursoPK, short orden, String estado) {
+        this.programaCursoPK = programaCursoPK;
+        this.orden = orden;
         this.estado = estado;
     }
 
-    public ProgramaAlumno(String codPrograma, String codAlumno) {
-        this.programaAlumnoPK = new ProgramaAlumnoPK(codPrograma, codAlumno);
+    public ProgramaCurso(String codPrograma, String codCurso) {
+        this.programaCursoPK = new ProgramaCursoPK(codPrograma, codCurso);
     }
 
-    public ProgramaAlumnoPK getProgramaAlumnoPK() {
-        return programaAlumnoPK;
+    public ProgramaCursoPK getProgramaCursoPK() {
+        return programaCursoPK;
     }
 
-    public void setProgramaAlumnoPK(ProgramaAlumnoPK programaAlumnoPK) {
-        this.programaAlumnoPK = programaAlumnoPK;
+    public void setProgramaCursoPK(ProgramaCursoPK programaCursoPK) {
+        this.programaCursoPK = programaCursoPK;
+    }
+
+    public short getOrden() {
+        return orden;
+    }
+
+    public void setOrden(short orden) {
+        this.orden = orden;
     }
 
     public String getEstado() {
@@ -73,12 +86,12 @@ public class ProgramaAlumno implements Serializable {
         this.estado = estado;
     }
 
-    public Alumno getAlumno() {
-        return alumno;
+    public Curso getCurso() {
+        return curso;
     }
 
-    public void setAlumno(Alumno alumno) {
-        this.alumno = alumno;
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
 
     public Programa getPrograma() {
@@ -92,18 +105,18 @@ public class ProgramaAlumno implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (programaAlumnoPK != null ? programaAlumnoPK.hashCode() : 0);
+        hash += (programaCursoPK != null ? programaCursoPK.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ProgramaAlumno)) {
+        if (!(object instanceof ProgramaCurso)) {
             return false;
         }
-        ProgramaAlumno other = (ProgramaAlumno) object;
-        if ((this.programaAlumnoPK == null && other.programaAlumnoPK != null) || (this.programaAlumnoPK != null && !this.programaAlumnoPK.equals(other.programaAlumnoPK))) {
+        ProgramaCurso other = (ProgramaCurso) object;
+        if ((this.programaCursoPK == null && other.programaCursoPK != null) || (this.programaCursoPK != null && !this.programaCursoPK.equals(other.programaCursoPK))) {
             return false;
         }
         return true;
@@ -111,7 +124,7 @@ public class ProgramaAlumno implements Serializable {
 
     @Override
     public String toString() {
-        return "ec.edu.espe.module.ProgramaAlumno[ programaAlumnoPK=" + programaAlumnoPK + " ]";
+        return "ec.edu.espe.module.ProgramaCurso[ programaCursoPK=" + programaCursoPK + " ]";
     }
     
 }
