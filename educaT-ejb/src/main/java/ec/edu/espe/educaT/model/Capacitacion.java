@@ -37,7 +37,6 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "capacitacion")
-@XmlRootElement
 public class Capacitacion implements Serializable {
 
     private static final long serialVersionUID = 1L;
