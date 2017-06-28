@@ -24,7 +24,12 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author AyrtonWladimir
+ * @author Sofia Gomez
+ */
+
+/**Creación entidad Programa.
+ * @Entity Programa Entidad que define un programa en el isntituto. 
+ * Un programa esta dado por un conjunto de cursos.
  */
 @Entity
 @Table(name = "programa")

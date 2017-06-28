@@ -20,7 +20,11 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author AyrtonWladimir
+ * @author Sofia Gomez
+ */
+
+/**Creación entidad ProgramaAlumno.
+ * @Entity ProgramaAlumno Entidad que almacena los alumnos que pertenecen a un programa. 
  */
 @Entity
 @Table(name = "programa_alumno")

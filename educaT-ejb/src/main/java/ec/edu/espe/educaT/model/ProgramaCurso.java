@@ -20,7 +20,11 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author AyrtonWladimir
+ * @author Sofia Gomez
+ */
+
+/**Creación entidad ProgramaCurso.
+ * @Entity ProgramaCurso Entidad que almacena los cursos que pertenecen a un programa. 
  */
 @Entity
 @Table(name = "programa_curso")
