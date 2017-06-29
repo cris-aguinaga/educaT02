@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.educaT.dao;
 
-import ec.edu.espe.educaT.model.Docente;
+import ec.edu.espe.educaT.model.CapacitacionAlumno;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author AyrtonWladimir
  */
 @Stateless
-public class DocenteFacade extends AbstractFacade<Docente> {
+public class CapacitacionAlumnoFacade extends AbstractFacade<CapacitacionAlumno> {
 
     @PersistenceContext(unitName = "ec.edu.espe.educaT_educaT-ejb_ejb_1PU")
     private EntityManager em;
@@ -25,8 +25,8 @@ public class DocenteFacade extends AbstractFacade<Docente> {
         return em;
     }
 
-    public DocenteFacade() {
-        super(Docente.class);
+    public CapacitacionAlumnoFacade() {
+        super(CapacitacionAlumno.class);
     }
     
 }
