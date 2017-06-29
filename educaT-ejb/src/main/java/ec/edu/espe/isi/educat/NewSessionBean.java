@@ -9,11 +9,12 @@ import javax.ejb.LocalBean;
 
 /**
  *
- * @author martin
+ * @author CRIS
  */
 @Stateless
 @LocalBean
-public class NewSessionBean {
+public class NewSessionBean 
+{
 
     public void businessMethod() {
     }
