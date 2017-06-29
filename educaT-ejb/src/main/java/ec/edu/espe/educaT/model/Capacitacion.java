@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author CRIS
  */
 /**Creación entidad capacitacion
- * @Entity capcitacion Entidad que define el estado de un curso o programa en el instituto
+ * capcitacion Entidad que define el estado de un curso o programa en el instituto
  */
 @Entity
 @Table(name = "capacitacion")

@@ -28,7 +28,7 @@ import javax.validation.constraints.Size;
  */
 
 /**Creación entidad Alumno.
- * @Entity Alumno Entidad que almacena la informaciácion de los alumnos inscritos en el instituto
+ *Alumno Entidad que almacena la informaciácion de los alumnos inscritos en el instituto
  */
 @Entity
 @Table(name = "alumno")

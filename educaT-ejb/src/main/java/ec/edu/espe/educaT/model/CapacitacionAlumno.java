@@ -24,7 +24,7 @@ import javax.validation.constraints.Size;
  * @author AyrtonWladimir
  */
 /**Creación entidad capacitacion_alumno
- * @Entity capacitacion_alumno Entidad que almacena la informaciácion de los alumnos dentro de la capacitacion que hayan tomado */
+ * capacitacion_alumno Entidad que almacena la informaciácion de los alumnos dentro de la capacitacion que hayan tomado */
 @Entity
 @Table(name = "capacitacion_alumno")
 public class CapacitacionAlumno implements Serializable {

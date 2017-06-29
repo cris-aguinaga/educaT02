@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
  * @author CRIS
  */
 /**Creación entidad curso
- * @Entity curso Entidad que registra información referente a cada curso que oferta el instituto.
+ * curso Entidad que registra información referente a cada curso que oferta el instituto.
  */
 @Entity
 @Table(name = "curso")

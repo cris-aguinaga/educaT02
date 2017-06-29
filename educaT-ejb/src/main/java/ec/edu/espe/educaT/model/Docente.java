@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 
 /**Creación entidad Docente
- * @Entity docente Entidad que almacena la informaciácion de los docentes qeu dictan capacitaciones en el instituto
+ * docente Entidad que almacena la informaciácion de los docentes qeu dictan capacitaciones en el instituto
  */
 @Entity
 @Table(name = "docente")

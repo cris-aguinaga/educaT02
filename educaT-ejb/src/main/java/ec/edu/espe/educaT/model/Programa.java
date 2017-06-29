@@ -28,7 +28,7 @@ import javax.validation.constraints.Size;
  */
 
 /**Creación entidad Programa.
- * @Entity Programa Entidad que define un programa en el isntituto. 
+ * Programa Entidad que define un programa en el isntituto. 
  * Un programa esta dado por un conjunto de cursos.
  */
 @Entity

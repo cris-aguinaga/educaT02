@@ -24,7 +24,7 @@ import javax.validation.constraints.Size;
  */
 
 /**Creación entidad ProgramaAlumno.
- * @Entity ProgramaAlumno Entidad que almacena los alumnos que pertenecen a un programa. 
+ * ProgramaAlumno Entidad que almacena los alumnos que pertenecen a un programa. 
  */
 @Entity
 @Table(name = "programa_alumno")
