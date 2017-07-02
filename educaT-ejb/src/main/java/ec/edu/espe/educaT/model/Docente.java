@@ -21,13 +21,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
 /**
- *
- * @author CRIS
+ * Esta clase almacena la información de los docentes que dictan capacitaciones o cursos en el instituto
+ * @author: CRIS
+ * @version: 02/07/2017/A
+ * @see <a href = "https://github.com/cris-aguinaga/educaT02.git" /> educaT02.git – Repositorio en GitHub </a>
  */
 
-/**Creación entidad Docente
- * docente Entidad que almacena la informaciácion de los docentes qeu dictan capacitaciones en el instituto
- */
 @Entity
 @Table(name = "docente")
 public class Docente implements Serializable {
