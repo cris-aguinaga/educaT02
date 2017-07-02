@@ -6,6 +6,7 @@
   <version>1</version>
   <packaging>pom</packaging>
   <name>educaT</name>
+  <url>../images/innovamente_logo.png</url>
   <modules>
     <module>educaT-ear</module>
     <module>educaT-web</module>
@@ -69,4 +70,67 @@
             </plugin>
         </plugins>
     </reporting>
+    <description>Sistema de Gestión Académica para el instituto INNOVAMENTE</description>
+    <inceptionYear>2017</inceptionYear>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <organization>
+        <name>INNOVAMENTE</name>
+        <url>../images/innovamente_logo.png</url>
+    </organization>   
+    <developers>
+        <developer>            
+            <id>cagui</id>
+            <name>Cristina Aguinaga</name>
+            <email>mcaguinaga@espe.edu.ec</email>
+            <roles>
+                <role>Project Manager</role>
+                <role>Developer</role>
+            </roles>
+            <timezone>America/Ecuador</timezone>
+            <properties>
+                <picUrl>../images/cristina.png</picUrl>
+            </properties>
+        </developer>
+        <developer>
+            <id>sgom</id>
+            <name>Sofía Gómez</name>
+            <email>asgomez4@espe.edu.ec</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>America/Ecuador</timezone>
+            <properties>
+                <picUrl>../images/sofia.png</picUrl>
+            </properties>
+        </developer>
+        <developer>
+            <id>acab</id>
+            <name>Ayrton Cabezas</name>
+            <email>awcabezas1@espe.edu.ec</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>America/Ecuador</timezone>
+            <properties>
+                <picUrl>../images/ayrton.png</picUrl>
+            </properties>
+        </developer>        
+    </developers>
+    <prerequisites>
+        <maven>2.0.6</maven>
+    </prerequisites>
+    <distributionManagement>
+        <repository> 
+            <id>eduT02</id>
+            <name>educaT02</name>
+            <url>https://github.com/cris-aguinaga/educaT02.git</url>
+        </repository>
+    </distributionManagement>
 </project>

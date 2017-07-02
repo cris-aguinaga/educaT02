@@ -14,6 +14,7 @@ import javax.persistence.PersistenceContext;
  * Esta es una subclase de la clase AbstractFacade que define los programas por alumno.
  * La clase AbstractFacade permitira realizar un CRUD.
  * @author Sofia Gomez
+ * @version 02/07/2017
  */
 @Stateless
 public class ProgramaAlumnoFacade extends AbstractFacade<ProgramaAlumno> {
