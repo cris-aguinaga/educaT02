@@ -23,8 +23,7 @@ import javax.xml.bind.annotation.XmlTransient;
 /**
  * Esta clase almacena la información de los docentes que dictan capacitaciones o cursos en el instituto
  * @author: CRIS
- * @version: 02/07/2017/A
- * @see <a href = "https://github.com/cris-aguinaga/educaT02.git" /> educaT02.git – Repositorio en GitHub </a>
+ * @version: 02/07/2017
  */
 
 @Entity

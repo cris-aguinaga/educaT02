@@ -15,7 +15,6 @@ import javax.persistence.PersistenceContext;
  * será capaz de controlar todos los cambios que se han realizado en él y ejecutar las consultas adecuadas contra la base de datos.
  * @author: CRIS
  * @version: 02/07/2017
- * @see <a href = "https://github.com/cris-aguinaga/educaT02.git" /> educaT02.git – Repositorio en GitHub </a>
  */
 
 @Stateless
