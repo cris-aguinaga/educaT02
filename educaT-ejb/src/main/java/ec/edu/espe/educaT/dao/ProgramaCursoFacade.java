@@ -11,8 +11,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
- * @author AyrtonWladimir
+ * Esta es una subclase de la clase AbstractFacade que define los cursos que estan dentro del programa.
+ * La clase AbstractFacade permitira realizar un CRUD.
+ * @author Sofia Gomez
  */
 @Stateless
 public class ProgramaCursoFacade extends AbstractFacade<ProgramaCurso> {

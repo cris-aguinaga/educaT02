@@ -23,12 +23,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- *
- * @author Sofia Gomez
- */
-
-/**Creación entidad Programa.
- * Programa Entidad que define un programa en el isntituto. 
+ * Esta clase define un programa en el instituto. 
  * Un programa esta dado por un conjunto de cursos.
  */
 @Entity
