@@ -1,7 +1,9 @@
-
-/*estes es mi comentario*/
-/*Este es mi comentario
-*/
+/**
+ *  Esta clase abstracta contiene una serie de métodos que nos permiten realizar operaciones CRUD en nuestras entidades
+ * @author: CRIS
+ * @version: 02/07/2017
+ * @see <a href = "https://github.com/cris-aguinaga/educaT02.git" /> educaT02.git – Repositorio en GitHub </a>
+ */
 
 package ec.edu.espe.educaT.dao;
 
