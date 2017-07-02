@@ -11,8 +11,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
- * @author AyrtonWladimir
+ * Esta es una subclase de la clase AbstractFacade que define los alumnos del instituto.
+ * La clase AbstractFacade permitira realizar el CRUD de alumnos.
+ * @author: AyrtonWladimir
+ * @version: 02/07/2017
  */
 @Stateless
 public class AlumnoFacade extends AbstractFacade<Alumno> {
@@ -28,5 +30,5 @@ public class AlumnoFacade extends AbstractFacade<Alumno> {
     public AlumnoFacade() {
         super(Alumno.class);
     }
-    
+
 }
