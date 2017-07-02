@@ -20,11 +20,12 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
+ * Creación entidad capacitacion_alumno. Entidad que almacena la informaciácion
+ * de los alumnos dentro de la capacitacion que hayan tomado
  *
- * @author AyrtonWladimir
+ * @author: AyrtonWladimir
+ * @version: 02/07/2017
  */
-/**Creación entidad capacitacion_alumno
- * capacitacion_alumno Entidad que almacena la informaciácion de los alumnos dentro de la capacitacion que hayan tomado */
 @Entity
 @Table(name = "capacitacion_alumno")
 public class CapacitacionAlumno implements Serializable {
@@ -130,5 +131,5 @@ public class CapacitacionAlumno implements Serializable {
     public String toString() {
         return "ec.edu.espe.module.CapacitacionAlumno[ capacitacionAlumnoPK=" + capacitacionAlumnoPK + " ]";
     }
-    
+
 }

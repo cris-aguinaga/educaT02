@@ -23,12 +23,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
+ * Creación entidad Alumno. Entidad que almacena la informaciácion de los
+ * alumnos inscritos en el instituto
  *
- * @author AyrtonWladimir
- */
-
-/**Creación entidad Alumno.
- *Alumno Entidad que almacena la informaciácion de los alumnos inscritos en el instituto
+ * @author: AyrtonWladimir
+ * @version: 02/07/2017
  */
 @Entity
 @Table(name = "alumno")
@@ -189,5 +188,5 @@ public class Alumno implements Serializable {
     public String toString() {
         return "ec.edu.espe.module.Alumno[ codAlumno=" + codAlumno + " ]";
     }
-    
+
 }
