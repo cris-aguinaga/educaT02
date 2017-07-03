@@ -29,12 +29,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- *
- * @author Sofia Gomez
- */
-
-/**Creación entidad ProgramaCurso.
- * ProgramaCurso Entidad que almacena los cursos que pertenecen a un programa. 
+ * Esta clase contiene información referente a los cursos que pertenecen a un programa. 
+ * @author: Sofia Gomez
+ * @version: 02/07/2017 
  */
 @Entity
 @Table(name = "programa_curso")

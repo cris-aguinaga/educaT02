@@ -33,8 +33,10 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * Esta clase define un programa en el instituto. 
+ * Esta clase contiene información referente a cada programa que el instituto oferta. 
  * Un programa esta dado por un conjunto de cursos.
+ * @author: Sofia Gomez
+ * @version: 02/07/2017 
  */
 @Entity
 @Table(name = "programa")
